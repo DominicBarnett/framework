@@ -1,0 +1,183 @@
+/* Normalize/reset styles for consistency */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root variables for easy theming */
+:root {
+    --font-family: 'Arial', sans-serif;
+    --heading-font: 'Georgia', serif;
+    --text-color: #2c2c2c; /* Slightly darker for a natural feel */
+    --background-color: #f4f3ec; /* Neutral parchment-like tone */
+    --link-color: #2d6a4f; /* Forest green for links */
+    --link-hover-color: #1b4332; /* Darker forest green */
+    --primary-spacing: 1rem;
+    --line-height: 1.5;
+
+    /* Thematic additions */
+    --leaf-green: #81b29a;
+    --bark-brown: #5c4742;
+    --cloud-white: #f4f3ec;
+    --fire-red: #d00000;
+    --sun-yellow: #f2cc8f;
+}
+
+/* Global styles */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: var(--line-height);
+    padding: var(--primary-spacing);
+    background-image: url('path-to-hidden-leaf-texture.jpg'); /* Add subtle texture */
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    margin-bottom: var(--primary-spacing);
+    color: var(--leaf-green); /* Theme color for headings */
+    border-bottom: 2px solid var(--bark-brown); /* Subtle emphasis */
+}
+
+p {
+    margin-bottom: var(--primary-spacing);
+}
+
+blockquote {
+    border-left: 4px solid var(--fire-red);
+    padding-left: var(--primary-spacing);
+    font-style: italic;
+    background-color: rgba(255, 230, 230, 0.4); /* Subtle fire theme */
+    border-radius: 4px;
+}
+
+ul, ol {
+    padding-left: 2rem;
+    margin-bottom: var(--primary-spacing);
+}
+
+li {
+    margin-bottom: 0.5rem;
+    list-style-type: circle; /* Foliage-inspired list style */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--primary-spacing);
+    background-color: var(--cloud-white);
+}
+
+th, td {
+    border: 1px solid var(--bark-brown);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--sun-yellow); /* Warm, inviting tone */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: var(--primary-spacing);
+    border: 2px solid var(--bark-brown); /* Frame-like aesthetic */
+    border-radius: 8px;
+}
+
+figure {
+    margin: 0 0 var(--primary-spacing);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: var(--primary-spacing);
+    border: 1px solid var(--leaf-green);
+    border-radius: 4px;
+    background-color: var(--cloud-white);
+}
+
+textarea {
+    font-family: inherit;
+    font-size: 1rem; 
+    padding: 1rem; /* Spacious padding for comfort */
+    margin-bottom: var(--primary-spacing);
+    border: 2px solid var(--leaf-green); /* Thematic border color */
+    border-radius: 8px; /* Rounded corners for a smooth appearance */
+    background-color: var(--cloud-white); /* Soft background for readability */
+    color: var(--text-color); /* Standard text color */
+    width: 100%; /* Full width to fit its container */
+    height: 200px; /* Fixed height */
+    overflow: auto; /* Enable scrolling when content overflows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    resize: none; /* Disable resizing */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+textarea:focus {
+    outline: none; /* Remove the default outline */
+    border-color: var(--fire-red); /* Highlight the border on focus */
+    box-shadow: 0 0 8px var(--fire-red); /* Add a glowing effect */
+    background-color: #fffaf0; /* Slightly lighter background on focus */
+}
+
+button {
+    background-color: var(--link-color);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--link-hover-color);
+}
+
+fieldset {
+    border: 1px solid var(--bark-brown);
+    padding: var(--primary-spacing);
+    margin-bottom: var(--primary-spacing);
+    background-color: rgba(81, 178, 154, 0.1); /* Subtle thematic overlay */
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: var(--fire-red); /* Bold, striking legend color */
+}
+
+pre, code {
+    font-family: 'Courier New', monospace;
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: var(--primary-spacing);
+    border: 1px solid var(--bark-brown);
+}
