@@ -181,3 +181,16 @@ pre, code {
     margin-bottom: var(--primary-spacing);
     border: 1px solid var(--bark-brown);
 }
+
+@media print {
+    body {
+        background: none;
+        color: #000;
+    }
+    a {
+        text-decoration: underline;
+    }
+    img {
+        display: none;
+    }
+}
